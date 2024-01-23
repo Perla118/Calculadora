@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="definit.MainPage" NavigationPage.HasNavigationBar="False">
+
+    <StackLayout Orientation="Horizontal" BackgroundColor="Black" Padding="5">
+
+
+
+        <Grid VerticalOptions="EndAndExpand" BackgroundColor="Black" Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="Resultado" Grid.Row="0" Text="" FontSize="36" IsEnabled="False" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="End" Margin="10,0,15,0"/>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <!--//Botones de funciones-->
+                <Button Grid.Row="1" Grid.Column="0" Text="AC" FontSize="25" TextColor="#FF5A00" Margin="0,20,0,0" BackgroundColor="Black" Clicked="Clear"/>
+                <ImageButton Source="borrarboton.png" Grid.Row="1" Grid.Column="1" BackgroundColor="Black" Margin="0,20,0,0" Clicked="Erase"/>
+                <Button Grid.Row="4" Grid.Column="3" Text="+" FontSize="25" BackgroundColor="Black" TextColor="#FF5A00" Clicked="Operacion"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="%" FontSize="25" TextColor="#FF5A00" Margin="0,20,0,0" BackgroundColor="Black"/>
+                <Button Grid.Row="1" Grid.Column="3" Text="/" FontSize="25"  TextColor="#FF5A00" Margin="0,20,0,0" BackgroundColor="Black" Clicked="Operacion"/>
+                <Button Grid.Row="5" Grid.Column="2" Text="." FontSize="25" BackgroundColor="Black" Clicked="Decimal"/>
+                <Button Grid.Row="3" Grid.Column="3" Text="-" FontSize="50" BackgroundColor="Black" TextColor="#FF5A00" Clicked="Operacion"/>
+                <Button Grid.Row="5" Grid.Column="3" Text="=" FontSize="25" BackgroundColor="Black" TextColor="#FF5A00" Clicked="Igual"/>
+                <Button Grid.Row="2" Grid.Column="3" Text="x" FontSize="25" BackgroundColor="Black" TextColor="#FF5A00" Clicked="Operacion"/>
+
+                <!--//Botones de numeros-->
+                <Button Grid.Row="4" Grid.Column="0" Text="1" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="4" Grid.Column="1" Text="2" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="4" Grid.Column="2" Text="3" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="3" Grid.Column="0" Text="4" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="3" Grid.Column="1" Text="5" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="3" Grid.Column="2" Text="6" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="7" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="2" Grid.Column="1" Text="8" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="2" Grid.Column="2" Text="9" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                <Button Grid.Row="5" Grid.Column="1" Text="0" FontSize="25" BackgroundColor="Black" Clicked="print"/>
+                
+                <!--<ImageButton Grid.Row="5" Grid.Column="0" BackgroundColor="Black" Source="intercambio.png" />-->
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>
